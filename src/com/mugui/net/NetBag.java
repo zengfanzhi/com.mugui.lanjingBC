@@ -6,6 +6,15 @@ import com.mugui.bean.JsonBean;
 public class NetBag extends JsonBean {
 
 	/**
+	 * 	http连接类型
+	 */
+	public static final int TYPE_HTTP=2;
+	
+	/**
+	 * 	upd连接类型
+	 */
+	public static final int TYPE_UDP=1;
+	/**
 	 * 时间戳
 	 */
 	private String timestamp;
@@ -44,7 +53,7 @@ public class NetBag extends JsonBean {
 	/**
 	 * 数据处理主体
 	 */
-	private byte[] data;
+	private Object data;
 
 	/**
 	 * 用户唯一标示
@@ -132,12 +141,13 @@ public class NetBag extends JsonBean {
 		this.func = func;
 	}
 
-	public byte[] getData() {
+	public Object getData() {
 		return data;
 	}
 
-	public void setData(byte[] data) {
+	public void setData(Object data) {
 		this.data = data;
 	}
+
 
 }
