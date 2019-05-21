@@ -4,6 +4,10 @@ import com.mugui.MuguiApplication;
 
 public class ApplictionMain {
 	public static void main(String[] args) {
-		MuguiApplication.run(args);
+		try {
+			MuguiApplication.run(args);
+		} catch (Exception e) {
+			e.printStackTrace();
+		}
 	}
 }
